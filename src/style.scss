@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+img { content: normal !important; }
+body{
+    margin: 0;
+    .text{
+        width: 750px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp:3;
+        overflow: hidden;
+        font-size: 24px;
+    }
+}
+// 设置宽高比的属性
+[aspectratio]{
+    position: relative;
+    &::before{
+        content:'';
+        display: block;
+        width: 1px;
+        margin-left: -1px;
+        height: 0;
+    }
+}
+[aspectratio-content]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+[w-2-1]{
+    aspect-ratio:'2:1';// 该属性不能与其它css属性写在一起
+}
+// 移动端1像素问题
+@svg shape{
+    @rect{
+        width:100;
+        height:100;
+        stroke:black;
+        stroke-width:1;
+        fill:none
+    }
+}
+#example {
+    &.ignore{
+        background: white svg(shape)  no-repeat;
+        width: 375px;
+        height: 375px;        
+    }
+}

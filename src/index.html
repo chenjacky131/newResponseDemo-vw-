@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>移动端新的自适应解决方案(配合postcss)</title>
+</head>
+<body>
+    <div class="text">
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+        文字样例
+    </div>
+    <!-- 设置宽高比为2/1的div -->
+    <div aspectratio w-2-1> 
+        <div aspectratio-content>测试文字</div>
+    </div>
+    <!-- 处理移动端一像素问题 -->
+    <div id="example" class="ignore">
+        测试文字
+    </div>
+    <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+    <script>
+    window.onload = function () { 
+        window.viewportUnitsBuggyfill.init({ hacks: window.viewportUnitsBuggyfillHacks});
+    } 
+     </script>
+    <script src="./index.js"></script>    
+    <script src="./helloworld.ts"></script>
+</body>
+</html>
